@@ -1,101 +1,44 @@
-<!--<ion-header>
-  <ion-navbar>
-    <ion-title>Portada</ion-title>
-  </ion-navbar>
-</ion-header>-->
+<ion-header no-border>
+    <ion-navbar>
+        <ion-buttons end *ngIf="showSkip">
+            <button ion-button (click)="startApp()" color="primary">Skip</button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
 
+<ion-content no-bounce>
+    <ion-slides #slides (ionSlideWillChange)="onSlideChangeStart($event)" pager>
 
-<ion-content class="card-background-page" style="background: #c8c7cc;">
+        <ion-slide>
+            <img src="assets/img/ica-slidebox-img-1.png" class="slide-image" />
+            <h2 class="slide-title">
+                Welcome to <b>ICA</b>
+            </h2>
+            <p>
+                The <b>ionic conference app</b> is a practical preview of the ionic framework in action, and a demonstration of proper code use.
+            </p>
+        </ion-slide>
 
-<div class="" style="padding: 5px; border-top:2px solid #42719D;">
-  <h3 style="text-align: center; color: #fff; text-shadow: -2px 2px 6px #313131;">Como recibir el hormigón <br> elaborado en obra</h3>
-</div>
+        <ion-slide>
+            <img src="assets/img/ica-slidebox-img-2.png" class="slide-image" />
+            <h2 class="slide-title">What is Ionic?</h2>
+            <p><b>Ionic Framework</b> is an open source SDK that enables developers to build high quality mobile apps with web technologies like HTML, CSS, and JavaScript.</p>
+        </ion-slide>
 
- <ion-card style="background-color: #ccc; height: 130px;">
-    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Free-Download-Solid-Color-HD-Wallpapers-620x388.jpg"/>
-    <div class="card-title" style="top: 10% !important;">
-      <ion-grid>
-        <ion-row>
-          
-          <ion-col col-4>
-            <img src="http://www.hormigonelaborado.com/publico/template/logo/logo.png" style="width: 100px;" height="50px;">
-          </ion-col>
-          
-          <ion-col col-8>
-              <h3 style="color: #fff; font-weight: 400; margin-top: 4px; font-size: 14pt;">Muestreo y Ensayo de Asentamiento</h3>
-              
-          </ion-col>
+        <ion-slide>
+            <img src="assets/img/ica-slidebox-img-3.png" class="slide-image" />
+            <h2 class="slide-title">What is Ionic Pro?</h2>
+            <p><b>Ionic Pro</b> is a powerful set of services and features built on top of Ionic Framework that brings a totally new level of app development agility to mobile dev teams.</p>
+        </ion-slide>
 
-          <ion-col col-12>
-            <p style="color: #fff; font-size: 10pt;">(Según Normas IRAM 1541, 1536 Y Reglamento CIRSOC 201)</p>
-          </ion-col>
+        <ion-slide>
+            <img src="assets/img/ica-slidebox-img-4.png" class="slide-image" />
+            <h2 class="slide-title">Ready to Play?</h2>
+            <button ion-button icon-end large clear (click)="startApp()">
+        Continue
+        <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+        </ion-slide>
 
-        </ion-row>
-      </ion-grid>
-
-    </div>
-
-  </ion-card>
-
-
-   <ion-card style="background-color: #ccc; height: 130px;">
-    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Free-solid-color-orange-wallpaper-download-620x388.jpg"/>
-    <div class="card-title" style="top: 10% !important;">
-      <ion-grid>
-        <ion-row>
-          
-          <ion-col col-4>
-            <img src="http://www.hormigonelaborado.com/publico/template/logo/logo.png" style="width: 100px;" height="50px;">
-          </ion-col>
-          
-          <ion-col col-8>
-              <p></p>
-              <h3 style="color: #fff; margin-top: 0px; font-size: 14pt;">Aceptación o Rechazo en Función del Asentamiento</h3>
-          </ion-col>
-
-           <ion-col col-12>
-              <p></p>
-              <p style="color: #fff; font-size: 10pt;">(Según CIRSOC 201)</p>
-          </ion-col>
-
-        </ion-row>
-      </ion-grid>
-
-    </div>
-
-  </ion-card>
-
-
-   <ion-card style="background-color: #ccc; height: 130px;">
-    <img src="https://www.pixelstalk.net/wp-content/uploads/2016/06/Solid-Color-HD-Wallpapers-620x388.jpg"/>
-    <div class="card-title" style="top: 10% !important;">
-      <ion-grid>
-        <ion-row>
-          
-          <ion-col col-4>
-            <img src="http://www.hormigonelaborado.com/publico/template/logo/logo.png" style="width: 100px;" height="50px;">
-          </ion-col>
-          
-          <ion-col col-8>
-              <h4 style="color: #fff; font-weight: 400; margin-top: 13px; font-size: 14pt;">Moldeo de Probetas</h4>
-          </ion-col>
-
-          <ion-col col-12>
-              <p style="color: #fff; font-size: 10pt;">(Según Normas IRAM 15254 Reglamento CIRSOC 201)</p>
-          </ion-col>
-
-        </ion-row>
-      </ion-grid>
-
-    </div>
-
-  </ion-card>
-
-
-   <ion-card style="background-color: #ccc; height: auto !important;">
-    <img src="http://www.hormigonelaborado.com/publico/template/logo/logo.png"/>
-
-  </ion-card>
-
-
+    </ion-slides>
 </ion-content>
