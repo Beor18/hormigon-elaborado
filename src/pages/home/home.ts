@@ -9,7 +9,7 @@ import { AboutPage } from '../about/about';
 })
 export class HomePage {
 
-  showSkip = true;
+  showSkip = false;
 
  constructor(public navCtrl: NavController) {
 
